@@ -1,5 +1,7 @@
 package com.travel.diary.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -17,7 +19,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
-public class DiaryPhotoEntity {
+public class DiaryPhotoEntity implements Serializable {
+
+	private static final long serialVersionUID = 6296350462776631301L;
 
 	@Id
 	private String userId;
