@@ -1,9 +1,9 @@
 ##
-target/
-**/target/
-**/build/
-**/bin/
-**/logs/
+!/target/
+!/core/target/
+!/build/
+!/core/bin/
+!/core/logs/
 bin/
 *.class
 
