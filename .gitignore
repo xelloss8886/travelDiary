@@ -1,9 +1,9 @@
 ##
-!/target/
-!/core/target/
-!/build/
-!/core/bin/
-!/core/logs/
+**/target/
+core/target/
+**/build/*
+core/bin/
+/core/logs/
 bin/
 *.class
 
@@ -34,3 +34,5 @@ bin/
 /dist/
 /nbdist/
 /.nb-gradle/
+/target/
+/bin/

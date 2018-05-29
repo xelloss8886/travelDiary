@@ -23,7 +23,6 @@ public class DiaryServiceImpl implements DiaryService {
 	public void add(DiaryEntity diary) {
 		EntityManager em = entityManagerFactory.createEntityManager();
 		diaryRepository.save(diary);
-		em.persist(diary);
 	}
 
 }
