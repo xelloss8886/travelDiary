@@ -1,1 +1,3 @@
 rootProject.name = 'travelDiary'
+include 'core'
+include 'domain'

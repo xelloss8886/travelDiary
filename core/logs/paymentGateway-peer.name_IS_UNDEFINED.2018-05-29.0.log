@@ -1,0 +1,53 @@
+[22:01:59.978] [INFO ] [com.travel.diary.TravelApplication] Starting TravelApplication on namseong-uui-MacBook-Pro.local with PID 55274 (/Users/namsungwoo/git/travelDiary/core/bin/main started by namsungwoo in /Users/namsungwoo/git/travelDiary/core)
+[22:01:59.979] [INFO ] [com.travel.diary.TravelApplication] No active profile set, falling back to default profiles: default
+[22:01:59.981] [INFO ] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74bf4926: startup date [Tue May 29 22:01:59 KST 2018]; root of context hierarchy
+[22:02:00.360] [INFO ] [o.s.d.r.c.RepositoryConfigurationDelegate] Multiple Spring Data modules found, entering strict repository configuration mode!
+[22:02:00.461] [INFO ] [o.s.d.r.c.RepositoryConfigurationDelegate] Multiple Spring Data modules found, entering strict repository configuration mode!
+[22:02:00.465] [INFO ] [o.s.d.r.c.RepositoryConfigurationExtensionSupport] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.travel.diary.repositories.DiaryRepository.
+[22:02:00.536] [INFO ] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2f3e366f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[22:02:00.607] [INFO ] [o.s.b.w.e.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+[22:02:00.608] [INFO ] [o.a.catalina.core.StandardService] Starting service [Tomcat]
+[22:02:00.608] [INFO ] [o.a.catalina.core.StandardEngine] Starting Servlet Engine: Apache Tomcat/8.5.31
+[22:02:00.621] [INFO ] [o.a.c.c.C.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+[22:02:00.621] [INFO ] [o.s.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 640 ms
+[22:02:00.837] [INFO ] [o.s.b.w.s.ServletRegistrationBean] Servlet dispatcherServlet mapped to [/]
+[22:02:00.837] [INFO ] [o.s.b.w.s.FilterRegistrationBean] Mapping filter: 'characterEncodingFilter' to: [/*]
+[22:02:00.838] [INFO ] [o.s.b.w.s.FilterRegistrationBean] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[22:02:00.838] [INFO ] [o.s.b.w.s.FilterRegistrationBean] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[22:02:00.838] [INFO ] [o.s.b.w.s.FilterRegistrationBean] Mapping filter: 'requestContextFilter' to: [/*]
+[22:02:00.838] [INFO ] [o.s.b.w.s.FilterRegistrationBean] Mapping filter: 'httpTraceFilter' to: [/*]
+[22:02:00.838] [INFO ] [o.s.b.w.s.FilterRegistrationBean] Mapping filter: 'webMvcMetricsFilter' to: [/*]
+[22:02:00.864] [INFO ] [com.zaxxer.hikari.HikariDataSource] HikariPool-2 - Starting...
+[22:02:00.983] [INFO ] [com.zaxxer.hikari.HikariDataSource] HikariPool-2 - Start completed.
+[22:02:00.997] [INFO ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] Building JPA container EntityManagerFactory for persistence unit 'default'
+[22:02:00.998] [INFO ] [o.h.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[22:02:01.006] [INFO ] [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[22:02:01.037] [INFO ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[22:02:01.098] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[22:02:01.171] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerAdapter] Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74bf4926: startup date [Tue May 29 22:01:59 KST 2018]; root of context hierarchy
+[22:02:01.179] [WARN ] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[22:02:01.183] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping] Mapped "{[/],methods=[GET]}" onto public java.lang.String com.travel.diary.controller.HomeController.home(org.springframework.ui.Model)
+[22:02:01.185] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[22:02:01.185] [INFO ] [o.s.w.s.m.m.a.RequestMappingHandlerMapping] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[22:02:01.197] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[22:02:01.197] [INFO ] [o.s.w.s.h.SimpleUrlHandlerMapping] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[22:02:01.218] [WARN ] [o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+[22:02:01.351] [INFO ] [o.s.b.d.a.OptionalLiveReloadServer] LiveReload server is running on port 35729
+[22:02:01.356] [INFO ] [o.s.b.a.e.web.EndpointLinksResolver] Exposing 2 endpoint(s) beneath base path '/actuator'
+[22:02:01.358] [INFO ] [o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping] Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+[22:02:01.368] [INFO ] [o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping] Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+[22:02:01.369] [INFO ] [o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping] Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[22:02:01.403] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter] Registering beans for JMX exposure on startup
+[22:02:01.403] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter] Bean with name 'firstDataSource' has been autodetected for JMX exposure
+[22:02:01.410] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter] Located MBean 'firstDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=firstDataSource,type=HikariDataSource]
+[22:02:01.420] [INFO ] [o.s.b.w.e.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+[22:02:01.421] [INFO ] [com.travel.diary.TravelApplication] Started TravelApplication in 1.538 seconds (JVM running for 71.055)
+[22:02:01.424] [INFO ] [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] Condition evaluation unchanged
+[22:02:21.908] [INFO ] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74bf4926: startup date [Tue May 29 22:01:59 KST 2018]; root of context hierarchy
+[22:02:21.931] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter] Unregistering JMX-exposed beans on shutdown
+[22:02:21.931] [INFO ] [o.s.j.e.a.AnnotationMBeanExporter] Unregistering JMX-exposed beans
+[22:02:21.932] [INFO ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+[22:02:21.935] [INFO ] [com.zaxxer.hikari.HikariDataSource] HikariPool-2 - Shutdown initiated...
+[22:02:21.940] [INFO ] [com.zaxxer.hikari.HikariDataSource] HikariPool-2 - Shutdown completed.
