@@ -4,6 +4,8 @@ target/
 **/build/
 **/bin/
 **/logs/
+bin/
+*.class
 
 .gradle
 /build/
