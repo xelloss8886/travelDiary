@@ -6,14 +6,14 @@ import java.io.IOException;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -29,6 +29,9 @@ public class HomeController {
 
 	@Autowired
 	private DiaryService diaryService;
+
+	@Value("${travel.file.directory}")
+	private String destinationDir;
 
 	private ObjectMapper mapper = new ObjectMapper();
 
@@ -47,9 +50,9 @@ public class HomeController {
 		return mapper.writeValueAsString(entity);
 	}
 
-	@PostMapping(value = "/upload", produces = MediaType.MULTIPART_FORM_DATA_VALUE, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+	@PostMapping(value = "/upload")
 	@ResponseBody
-	public ResponseEntity<?> fileUpload(@RequestPart MultipartFile sourceFile)
+	public ResponseEntity<?> fileUpload(@RequestParam("file") MultipartFile sourceFile)
 			throws IllegalStateException, IOException {
 		String sourceFileName = sourceFile.getOriginalFilename();
 		String sourceFileNameExtension = FilenameUtils.getExtension(sourceFileName).toLowerCase();
@@ -57,7 +60,7 @@ public class HomeController {
 		String destinationFileName;
 		do {
 			destinationFileName = RandomStringUtils.randomAlphanumeric(32) + "." + sourceFileNameExtension;
-			destinationFile = new File("C:/attachments/" + destinationFileName);
+			destinationFile = new File(destinationDir + destinationFileName);
 		} while (destinationFile.exists());
 		destinationFile.getParentFile().mkdirs();
 		sourceFile.transferTo(destinationFile);
