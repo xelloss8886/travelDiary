@@ -1,9 +1,11 @@
 package com.travel.diary.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -18,7 +20,7 @@ public class HomeController {
 
 	private ObjectMapper mapper = new ObjectMapper();
 
-	@GetMapping("/")
+	@GetMapping("/test")
 	@ResponseBody
 	public String home(Model model) throws Exception {
 		DiaryEntity entity = new DiaryEntity();
@@ -26,5 +28,11 @@ public class HomeController {
 		entity.setDiaryId("test1111");
 		diaryService.add(entity);
 		return mapper.writeValueAsString(entity);
+	}
+
+	@PostMapping(value = "/upload", produces = MediaType.MULTIPART_FORM_DATA_VALUE, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+	@ResponseBody
+	public String fileUpload(Model model) {
+		return "ok";
 	}
 }

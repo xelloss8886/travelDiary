@@ -1,6 +1,5 @@
 package com.travel.diary.service.impl;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,6 @@ public class DiaryServiceImpl implements DiaryService {
 
 	@Override
 	public void add(DiaryEntity diary) {
-		EntityManager em = entityManagerFactory.createEntityManager();
 		diaryRepository.save(diary);
 	}
 

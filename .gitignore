@@ -4,7 +4,7 @@ core/target/
 **/build/*
 core/bin/
 /core/logs/
-bin/
+/bin/
 *.class
 
 .gradle
