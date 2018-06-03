@@ -6,6 +6,7 @@ core/bin/
 /core/logs/
 /bin/
 *.class
+**/bin/
 
 .gradle
 /build/
