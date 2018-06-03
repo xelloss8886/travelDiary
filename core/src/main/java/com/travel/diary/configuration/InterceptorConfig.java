@@ -8,7 +8,7 @@ import com.travel.diary.interceptor.AdminInterceptor;
 import com.travel.diary.interceptor.TravelInterceptor;
 
 @Configuration
-public class AdminInterceptorConfig implements WebMvcConfigurer {
+public class InterceptorConfig implements WebMvcConfigurer {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
