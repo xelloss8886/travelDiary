@@ -22,7 +22,11 @@ public class PhotoEntity {
 
 	private String fileName;
 
-	private String pLocation;
+	private String pLocationInfo;
 
 	private String pTime;
+
+	private String pLatitude;
+
+	private String pLongitude;
 }
